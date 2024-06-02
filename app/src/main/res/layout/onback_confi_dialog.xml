@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@drawable/dialog_back"
+    android:paddingBottom="@dimen/_16sdp"
+    android:layout_marginHorizontal="@dimen/_20sdp"
+
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:text="@string/save_changes"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="#E87F4E"
+        android:fontFamily="@font/ubuntu_med"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:text="@string/do_you_want_to_save_changes"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ubuntu_med"
+        android:includeFontPadding="false"
+        android:layout_marginTop="@dimen/_10sdp"
+        >
+    </TextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/confirmation"
+        android:layout_marginTop="@dimen/_28sdp"
+        >
+
+        <TextView
+            android:id="@+id/cancelTxt"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textColor="#E87F4E"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+
+            >
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/saveTxt"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="#E87F4E"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textSize="@dimen/_15sdp">
+
+        </TextView>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

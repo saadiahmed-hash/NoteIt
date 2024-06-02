@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Activities.MainActivity">
+    
+    <TextView
+        android:elevation="@dimen/_10sdp"
+        android:id="@+id/myNotesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_notes"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/_20ssp"
+        
+        >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/paramsImage"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:src="@drawable/baseline_settings_24"
+        app:tint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_12sdp" >
+
+    </ImageView>
+
+    
+    <LinearLayout
+        android:elevation="@dimen/_10sdp"
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/search_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/myNotesText"
+        android:paddingHorizontal="@dimen/_10sdp"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/baseline_search_24"
+            android:contentDescription="@string/app_name"
+            app:tint="@color/searchIconColor"
+            >
+        </ImageView>
+        
+        
+        <EditText
+            android:paddingEnd="@dimen/_5sdp"
+            android:id="@+id/searchNoteEdit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:background="@null"
+            android:hint="@string/search_notes"
+            android:textColorHint="@color/textHintColor"
+            android:fontFamily="@font/ubuntu_reg"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/white"
+            android:includeFontPadding="false"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            >
+
+        </EditText>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/searchLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#00FFFFFF"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@id/notesRecycler"
+        >
+
+        <TextView
+            android:id="@+id/allTxt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/all"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_med"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/_12ssp"
+            android:background="@drawable/all_text_back"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:elevation="@dimen/_5sdp"
+            >
+
+        </TextView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/defaultCard"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:backgroundTint="@color/colorDefaultNote"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            >
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yellowCard"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:backgroundTint="@color/colorNote2"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            >
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/redCard"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:backgroundTint="@color/colorNote3"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            >
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/blueCard"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:backgroundTint="@color/colorNote4"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            >
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/blackCard"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:backgroundTint="@color/colorNote5"
+            app:cardElevation="@dimen/_5sdp"
+
+            >
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_2sdp"
+        android:clipToPadding="false"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterLayout">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <ImageView
+        android:id="@+id/addNoteBtn"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/add_icon"
+        android:background="@drawable/add_btn_background"
+        android:padding="@dimen/_5sdp"
+        app:tint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_15sdp"
+        >
+
+    </ImageView>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/empty"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/empty">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

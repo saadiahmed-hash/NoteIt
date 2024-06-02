@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="app_name">Save it</string>
+    <string name="my_notes">ملاحظاتي</string>
+    <string name="search_notes">البحث في الملاحظات</string>
+    <string name="note_title">عنوان الملاحظة</string>
+    <string name="note_subtitle">عنوان فرعي للملاحظة</string>
+    <string name="type_your_note_here">اكتب ملاحظتك هنا</string>
+    <string name="all">الكل</string>
+    <string name="pick_color">اختر اللون</string>
+    <string name="add_image">إضافة صورة</string>
+    <string name="add_link">إضافة رابط</string>
+    <string name="delete_note">حذف الملاحظة</string>
+    <string name="do_you_want_to_delete_this_note">هل تريد حذف هذه الملاحظة؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="delete">حذف</string>
+    <string name="add_web_link">أضف رابط الويب</string>
+    <string name="add">أضف</string>
+    <string name="save_changes">حفظ التغييرات</string>
+    <string name="do_you_want_to_save_changes">هل تريد ان تحفظ التغييرات؟</string>
+    <string name="save">حفظ</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="please_entre_a_weblink">الرجاء إدخال رابط ويب</string>
+    <string name="please_enter_a_valid_weblink">الرجاء إدخال رابط ويب صالح</string>
+</resources>

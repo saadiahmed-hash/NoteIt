@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Save it</string>
+    <string name="my_notes">My notes</string>
+    <string name="search_notes">Search notes</string>
+    <string name="note_title">Note title</string>
+    <string name="note_subtitle">Note subtitle</string>
+    <string name="type_your_note_here">Type your note here</string>
+    <string name="miscellaneous" translatable="false">Miscellaneous</string>
+    <string name="all">All</string>
+    <string name="pick_color">Pick color</string>
+    <string name="add_image">Add Image</string>
+    <string name="add_link">Add Link</string>
+    <string name="delete_note">Delete note</string>
+    <string name="do_you_want_to_delete_this_note">Do you want to delete this note ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="add_web_link">Add web link</string>
+    <string name="add">Add</string>
+    <string name="save_changes">Save changes</string>
+    <string name="do_you_want_to_save_changes">Do you want to save changes ?</string>
+    <string name="save">Save</string>
+    <string name="contact_us">Contact us</string>
+    <string name="please_entre_a_weblink">please entre a webLink</string>
+    <string name="please_enter_a_valid_weblink">please enter a valid WebLink</string>
+</resources>
